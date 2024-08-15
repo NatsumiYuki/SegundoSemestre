@@ -7,7 +7,7 @@ int Palindromo(char p[50], int tam, int i){
     if (p[i] != p[tam]){
        return 0;
     } else {
-        return Palindromo(p, i++, tam--);
+        return Palindromo(p, i+1, tam-1);
      }
   }
 }
@@ -17,17 +17,17 @@ int main(){
     int tamanho;
     int i = 0;
 
-    printf ("Insira uma palavra:\n");
+    while(strcmp(palavra,"FIM") != 0){
     scanf ("%s", palavra);
 
     tamanho = strlen(palavra);
     tamanho--;
 
     if (Palindromo(palavra, tamanho, i)){
-        printf ("P\n");
+        printf ("SIM\n");
     } else {
-        printf ("NP\n");
+        printf ("NAO\n");
     }
-
+    }
     return 0;
 }

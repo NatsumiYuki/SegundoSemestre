@@ -22,9 +22,9 @@ int main(){
     }
 
     if (igual == 0){
-        printf ("P");
+        printf ("SIM");
     } else {
-        printf ("NP");
+        printf ("NAO");
     }
     return 0;
 }
