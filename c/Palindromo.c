@@ -3,14 +3,12 @@
 #include <stdlib.h>
 
 int main(){
-    char palavra[50];
+    char palavra[500];
     int i = 0, tamanho, igual = 0;
 
-    printf ("Insira a palavra:\n");
+    do{
     scanf ("%s", palavra);
-
     tamanho = strlen(palavra);
-    // 0
     tamanho--;
 
     while(i <= tamanho){
@@ -20,11 +18,12 @@ int main(){
         i++;
         tamanho--;
     }
-
     if (igual == 0){
-        printf ("SIM");
+        printf ("SIM\n");
     } else {
-        printf ("NAO");
+        printf ("NAO\n");
     }
+    }while(strcmp(palavra, "FIM") == 0);
+
     return 0;
 }
